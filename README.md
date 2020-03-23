@@ -1,4 +1,4 @@
-# vue-test
+# Georgia Tech Library
 
 ## Project setup
 ```
