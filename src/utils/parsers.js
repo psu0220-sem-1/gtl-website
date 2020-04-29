@@ -14,6 +14,7 @@ export default {
             : ""
         } ${vol.currentLocation.city}, ${vol.currentLocation.zip}`,
         material: vol.material.description,
+        isbn: vol.material.isbn,
       };
     });
   },
