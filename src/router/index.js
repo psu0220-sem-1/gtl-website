@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../pages/Home.vue";
 import Materials from "../pages/Materials.vue";
+import Volumes from "../pages/Volumes.vue";
 
 Vue.use(VueRouter);
 
@@ -9,12 +10,17 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
   },
   {
     path: "/materials",
     name: "Materials",
-    component: Materials
+    component: Materials,
+  },
+  {
+    path: "/volumes",
+    name: "Volumes",
+    component: Volumes,
   },
   {
     path: "/about",
@@ -23,13 +29,13 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../pages/About.vue")
-  }
+      import(/* webpackChunkName: "about" */ "../pages/About.vue"),
+  },
 ];
 
 const router = new VueRouter({
   routes,
-  mode: "history"
+  mode: "history",
 });
 
 export default router;
