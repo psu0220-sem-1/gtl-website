@@ -18,4 +18,14 @@ export default {
       };
     });
   },
+  parseAddresses(addresses) {
+    return addresses.map((address) => {
+      return {
+        id: address.addressId,
+        street: address.street,
+        additionalInfo: address.additionalInfo,
+        zip: address.zipCode,
+      };
+    });
+  },
 };
