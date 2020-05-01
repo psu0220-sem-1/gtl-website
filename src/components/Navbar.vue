@@ -6,18 +6,29 @@
         <router-link to="/">Home</router-link>
       </li>
       <li>
-        <router-link to="/materials">Materials</router-link>
+        <router-link :to="materialsRoute">Materials</router-link>
       </li>
       <li>
-        <router-link to="/volumes">Volumes</router-link>
+        <router-link :to="volumesRoute">Volumes</router-link>
+      </li>
+      <li>
+        <router-link :to="addressesRoute">Addresses</router-link>
       </li>
     </ul>
   </nav>
 </template>
 
 <script>
+import constants from "../constants";
 export default {
-  name: "Navbar"
+  name: "Navbar",
+  data() {
+    return {
+      materialsRoute: constants.routes.MATERIALS_PAGE,
+      volumesRoute: constants.routes.VOLUMES_PAGE,
+      addressesRoute: constants.routes.ADDRESSES_PAGE
+    };
+  }
 };
 </script>
 
