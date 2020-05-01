@@ -3,6 +3,10 @@ import VueRouter from "vue-router";
 import Home from "../pages/Home.vue";
 import Materials from "../pages/Materials.vue";
 import Volumes from "../pages/Volumes.vue";
+import Addresses from "../pages/Addresses.vue";
+import VolumeForm from "../components/volume/VolumeForm.vue";
+import AddressForm from "../components/address/AddressForm.vue";
+import constants from "../constants";
 
 Vue.use(VueRouter);
 
@@ -13,14 +17,27 @@ const routes = [
     component: Home,
   },
   {
-    path: "/materials",
+    path: constants.routes.MATERIALS_PAGE,
     name: "Materials",
     component: Materials,
   },
   {
-    path: "/volumes",
+    path: constants.routes.VOLUMES_PAGE,
     name: "Volumes",
     component: Volumes,
+  },
+  {
+    path: constants.routes.ADDRESSES_PAGE,
+    name: "Addresses",
+    component: Addresses,
+  },
+  {
+    path: constants.routes.CREATE_VOLUME,
+    component: VolumeForm,
+  },
+  {
+    path: constants.routes.CREATE_ADDRESS,
+    component: AddressForm,
   },
   {
     path: "/about",
